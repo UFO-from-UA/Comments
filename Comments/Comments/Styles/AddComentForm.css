@@ -1,0 +1,196 @@
+﻿/*modal*/
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+.closeModal {
+    color: black;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+    .closeModal:hover, .closeModal:focus {
+        color: #000;
+        text-decoration: none;
+        cursor: pointer;
+    }
+.modal-header {
+    padding: 2px 16px;
+    background-color: #5cb85c;
+    color: white;
+}
+.modal-body {
+    padding: 2px 16px;
+}
+.modal-footer {
+    padding: 2px 16px;
+    background-color: #5cb85c;
+    color: white;
+}
+.modal-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    border: 1px solid #888;
+    width: 80%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    animation-name: animatetop;
+    animation-duration: 0.4s
+}
+/* Add Animation */
+@keyframes animatetop {
+    from {
+        top: -300px;
+        opacity: 0
+    }
+
+    to {
+        top: 0;
+        opacity: 1
+    }
+}
+.row {
+    display: block;
+    padding: 7px 8px;
+    margin-bottom: 7px;
+}
+    .row:hover {
+        background: #f1f7fa;
+    }
+label {
+    /*display: block;*/
+    display: inline-block;
+    font-size: 1.2em;
+    font-weight: bold;
+    width: auto;
+    padding: 6px 0;
+    color: #464646;
+    vertical-align: top;
+    width: 15rem;
+    margin-bottom: unset;
+}
+div.row label.ss {
+    display: block;
+    width: 40rem;
+}
+label span.req, span.req {
+    color: #ff0000;
+}
+/*div.modal-body div.row txtarea#message.txtarea.xx{*/
+.txtarea {
+    width: 100rem;
+    height: 100px;
+    resize: none;
+    max-width: none;
+    text-wrap: normal;
+}
+.txt {
+    width: 30rem;
+    margin-top: 4px;
+}
+.modalConfirn {
+    width: 100%;
+    background: none;
+    border: none;
+}
+    .modalConfirn h3 {
+        width: 100%;
+    }
+.modalConfirnbtn:hover {
+    background: white;
+    color: #e1332d;
+}
+.modalConfirn.btn {
+    color: #fff;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 400;
+    text-decoration: none;
+    text-transform: uppercase;
+    width: 100%;
+}
+    .modalConfirn.btn:hover {
+        text-decoration: none;
+    }
+.modalConfirn.btn-5 {
+    border: 0 solid;
+    box-shadow: inset 0 0 20px rgba(255, 255, 255, 0);
+    outline: 1px solid;
+    outline-color: rgba(255, 255, 255, 0.5);
+    outline-offset: 0px;
+    text-shadow: none;
+    transition: all 1250ms cubic-bezier(0.19, 1, 0.22, 1);
+}
+    .modalConfirn.btn-5:hover {
+        border: 1px solid;
+        box-shadow: inset 0 0 20px rgba(255, 255, 255, 0.5), 0 0 20px rgba(255, 255, 255, 0.2);
+        outline-color: rgba(255, 255, 255, 0);
+        outline-offset: 15px;
+        text-shadow: 1px 1px 2px #427388;
+    }
+.row img {
+    width: 14rem;
+    /*margin-left:-15rem;*/
+}
+
+/*modal*/
+.Comment-main {
+    margin: 0 0.5rem;
+    min-height: 20rem;
+    background: #aaaaaa;
+    margin-bottom:5px;
+}
+.Comment-main:hover {
+    background:#cacaca;
+}
+
+/*div.Comment-main div.col-md-3.Info p.NickName {*/
+body div.Comment-main div.col-md-3.Info p span.NickName {
+    font-size: 2rem;
+    font-style: oblique;
+    color: blue
+}
+.PostDate{
+
+}
+func button {
+   margin:10px;width:25rem;height:5rem;font-size:1.6rem;font-style:oblique;
+}
+p{
+    margin:0;
+}
+.Comment-text ,.func{
+    padding:10px;
+}
+.Comment-text {
+    /*border: 1px solid black;*/
+}
+
+div.col-md-3.Info,div.col-md-9{
+    padding: 1rem;
+}
+div.col-md-3.Info {
+/*border-right:2px solid black;*/
+}
+
+.Topic{
+    padding: 0.5rem;
+    border-bottom: 2px solid black;
+}
+.topic {
+   font-size: 2em;
+   margin:0 30%;
+}
+.MyContainer {
+    padding-left: 1rem;
+}

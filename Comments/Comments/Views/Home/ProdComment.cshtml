@@ -1,0 +1,84 @@
+﻿@{
+    ViewBag.Title = "Comments";
+}
+<link href="~/Styles/AddComentForm.css" rel="stylesheet" />
+<div id="Modal" class="modal">
+    <div class="modal-content">
+        <div class="modal-header">
+            <span class="closeModal">&times;</span>
+            <h2>Оформление коментария </h2>
+        </div>
+        <div class="modal-body">
+
+            <div class="row">
+                <label for="nick">Никнейм<span class="req">*</span></label>
+                <input type="text" name="nick" id="nick" class="txt" tabindex="1" placeholder="Стив Джобс" required autocomplete="on" maxlength="200">
+            </div>
+
+            <div class="row">
+                <label for="email">E-mail Адрес <span class="req">*</span></label>
+                <input type="email" name="email" id="email" class="txt" tabindex="2" placeholder="address@mail.ru" required autocomplete="on" maxlength="200">
+            </div>
+
+            <div class="row">
+                <label for="homepage">Домашняя страница</label>
+                <input type="text" name="homepage" id="homepage" class="txt" tabindex="3" placeholder="http://welcome.to.hell" required autocomplete="on" maxlength="500">
+            </div>
+
+            <div class="row">
+                <img src='@Url.Action("Captcha", "Home")' alt='captcha' />
+                <span class="req">*</span>
+                <input type="text" name="capcha" id="capcha" class="txt" tabindex="4" placeholder="Код с картинки" required autocomplete="on" maxlength="4">
+            </div>
+
+            <div class="row">
+                <label for="topic">Teма</label>
+                <input type="text" name="topic" id="topic" class="txt" tabindex="5" placeholder="О чем вы желаете поведать" required autocomplete="on"  maxlength="200">
+            </div>
+
+            <div class="row">
+                <label class="ss" for="message">Коментарий<span class="req">*</span></label>
+                <div class="func">
+                    <button type="button" class="btn btn-primary"> func #1</button>
+                    <button type="button" class="btn btn-primary"> func #2</button>
+                    <button type="button" class="btn btn-primary"> func #3</button>
+                </div>
+                <textarea name="message" id="message" class="txtarea" tabindex="6" required maxlength="1400"></textarea>
+            </div>
+
+        </div>
+        <div class="modal-footer">
+            <button class="modalConfirn btn btn-5" tabindex="7" id="modalConfirn" onclick="Publish()"><h3>Опубликовать</h3></button>
+        </div>
+    </div>
+
+</div>
+<h2>@ViewBag.Title</h2>
+
+<div class="MyContainer">
+    @foreach (var it in ViewBag.ListItems)
+    {
+        <div class="Comment-main" style="margin-left:@it.LVL;">
+            <div class="col-md-3 Info">
+                <img src="~/Imges/PoweR.jpg" alt="face" height="42" width="80" />
+                <p> <span class="NickName">@it.UserName</span></p>
+                <p class="PostDate">@it.DateComment.ToShortDateString() : @it.DateComment.ToShortTimeString()</p>
+                <button type="button" class="btn btn-success LeftComment" onclick="LeftComment()" style="width:20rem;height:5rem;font-size:1.6rem;font-style:oblique;">
+                    Коментировать
+                </button>
+            </div>
+            <div class="col-md-9">
+                <div class="Topic">
+                    <span class="topic">@it.Title</span>
+                </div>
+                <div class="Comment-text">
+                    @it.Message
+                </div>
+            </div>
+            &nbsp;
+            <div hidden class="id">@it.Id</div>
+        </div>
+    }
+</div>
+
+<script src="~/Scripts/_MyComments.js"></script>
